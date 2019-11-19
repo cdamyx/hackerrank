@@ -23,7 +23,7 @@ function readLine() {
 }
 
 
-
+/*Original
 function main() {
     const N = parseInt(readLine(), 10);
 
@@ -44,4 +44,16 @@ function main() {
     }
 
 }
+*/
 
+//Variation 1
+function main() {
+	const N = parseInt(readLine(), 10);
+	
+	if (N % 2 == 1 || N > 5 && N < 21) {
+		console.log("Weird");
+	}
+	else {
+		console.log("Not Weird");
+	}
+}
