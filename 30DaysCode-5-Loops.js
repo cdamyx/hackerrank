@@ -26,8 +26,16 @@ function readLine() {
 
 function main() {
     const n = parseInt(readLine(), 10);
+	//basic loop solution
 	for (let i = 1; i <= 10; i++) {
 		let result = n * i;
 		console.log(n + " x " + i + " = " + result);
 	}
 }
+
+/*ES6 template strings solution from other student
+
+for (let i = 1; i <= 10; i += 1) {
+    console.log(`${n} x ${i} = ${n * i}`);
+}
+*/
