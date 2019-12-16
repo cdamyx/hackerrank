@@ -32,13 +32,14 @@ function main() {
     for (let i = 0; i < 6; i++) {
         arr[i] = readLine().split(' ').map(arrTemp => parseInt(arrTemp, 10));
     }
-        for (let j = 0; j < 4; j++) {
-            for (let k = 0; k < 4; k++) {
-                newArr[count] = arr[j][k] + arr[j][k+1] + arr[j][k+2] + arr[j+1][k+1] + arr[j+2][k] + arr[j+2][k+1] + arr[j+2][k+2];
-                count++;
-            }
+    //iterate 4 rows and 4 columns, sum the hourglass positions, and put in new array
+    for (let j = 0; j < 4; j++) {
+        for (let k = 0; k < 4; k++) {
+            newArr[count] = arr[j][k] + arr[j][k+1] + arr[j][k+2] + arr[j+1][k+1] + arr[j+2][k] + arr[j+2][k+1] + arr[j+2][k+2];
+            count++;
         }
-
-        newArr.sort(function(a, b){return b-a});
-        console.log(newArr[0]);
+    }
+    //sort the new array, always use the compare function for sorting numbers in JS
+    newArr.sort(function(a, b){return b-a});
+    console.log(newArr[0]);
 }
