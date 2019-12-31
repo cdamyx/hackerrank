@@ -26,7 +26,7 @@ class Book {
         console.log('Implement the \'display\' method!')
     }
 }
-
+//very basic class inheritance exercise, with constructor and method
 // Declare your class here.
 class MyBook extends Book {
     /**   
