@@ -48,10 +48,11 @@ class MyBook extends Book {
     *   Print the title, author, and price in the specified format.
     **/
     // Write your method here
+	//can use multiple console.logs or the single line method
     display() {
-		console.log("Title: " + this.title);
-		console.log("Author: " + this.author);
-		console.log("Price: " + this.price);
+		console.log("Title: " + this.title + "\nAuthor: " + this.author + "\nPrice: " + this.price);
+		//console.log("Author: " + this.author);
+		//console.log("Price: " + this.price);
 	}
 // End class
 }
