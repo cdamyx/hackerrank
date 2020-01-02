@@ -37,6 +37,8 @@ function readLine() {
  * }
  */
 
+//this exercise shows JS not throwing errors on NaN or undefined, so you have to use trickery. 
+
 function main() {
     const S = readLine();
     let N = Number(S);
