@@ -44,6 +44,25 @@ function main() {
     let N = Number(S);
 
     try {
+        //this is the suggested code trick from hackerrank in the comment above
+        S != N && err();
+        console.log(N);
+    }
+
+    catch(err) {
+        console.log("Bad String");
+    }
+}
+
+
+
+
+/*original answer
+function main() {
+    const S = readLine();
+    let N = Number(S);
+
+    try {
         //without the new Array line, JS does not throw error on NaN. JS is weird
         new Array(N);
         console.log(N);
@@ -53,4 +72,4 @@ function main() {
         console.log("Bad String");
     }
 }
-
+*/
