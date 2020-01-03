@@ -22,6 +22,7 @@ function Solution(){
     this.stack = [];
     this.queue = [];
 
+    //short for Solution.prototype.pushCharacter
     this.pushCharacter = this.stack.push;
     this.popCharacter = this.stack.pop;
     this.enqueueCharacter = this.queue.push;
