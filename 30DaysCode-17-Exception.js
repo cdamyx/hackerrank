@@ -18,6 +18,8 @@ function readLine() {
 }
 
 //Write your code here
+//I tried to make a constructor and use this.n and this.p, but I would always get "undefined" when trying to return those values. Below, a method is used in this
+//class without constructor or any this statements. JS and hackerrank is kind of rough
 class Calculator {
     power(n, p) {
         if (n < 0 || p < 0) {
