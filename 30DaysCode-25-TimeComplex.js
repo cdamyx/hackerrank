@@ -1,27 +1,31 @@
 function processData(input) {
     //Enter your code here
     let inputArr = input.split("\n");
+    let result = "";
     for (let i = 1; i < inputArr.length; i++) {
-        let n = inputArr[i]
-        if (n > 1 && n <= 3) {
-            console.log("Prime");
-            continue;
-        }
-        else if (n % 2 == 0 || n % 3 == 0) {
-            console.log("Not prime");
-            continue;
-        }
-
-        for (let j = 5; j * j < n; j += 6) {
-            if (n % j == 0 || n % (j + 2) == 0) {
-                console.log("Not prime");
-                continue;
+        let n = inputArr[i];
+        for (let j = 2; j <= Math.sqrt(n); j++) {
+            if (n % j == 0) {
+                result = "false";
+                break;
+            }
+            else {
+                result = "true";
             }
         }
-        console.log("Prime");
+
+        if (n >= 2 && result == "true") {
+            console.log("Prime");
+        }
+        else if (n == 2) {
+            console.log("Prime");
+        }
+        else {
+            console.log("Not prime");
+        }
+
     }
 } 
-
 process.stdin.resume();
 process.stdin.setEncoding("ascii");
 _input = "";
