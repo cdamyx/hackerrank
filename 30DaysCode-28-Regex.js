@@ -26,6 +26,7 @@ function readLine() {
 
 function main() {
     const N = parseInt(readLine(), 10);
+    //array to hold names from gmail addresses
     let gmailArr = [];
 
     for (let NItr = 0; NItr < N; NItr++) {
@@ -36,11 +37,12 @@ function main() {
         const emailID = firstNameEmailID[1];
 
         let pattern = /@gmail\.com$/ig;
-
+        //use regex .test() method to see if string contains pattern
         if (pattern.test(emailID)) {
             gmailArr.push(firstName);
         }
     }
+    //sort array and print one line at at time
     gmailArr.sort();
     for (let i = 0; i < gmailArr.length; i++) {
         console.log(gmailArr[i]);
